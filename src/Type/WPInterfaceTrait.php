@@ -232,8 +232,8 @@ trait WPInterfaceTrait {
 					}
 
 					// Check if the interface arg type is different from the new field arg type.
-					$new_field_arg_type = $this->field_arg_type_to_string( $arg_definition['type'] );
-					$interface_arg_type = $field_args[ $arg_name ]['type']();
+					$new_field_arg_type = $this->field_arg_type_to_string( $arg_definition['type'] );				
+					$interface_arg_type = $field_args[ $arg_name ]['type']()->name;
 					if ( ! empty( $new_field_arg_type ) && $interface_arg_type !== $new_field_arg_type ) {
 						graphql_debug(
 							sprintf(
